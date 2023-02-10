@@ -1,0 +1,14 @@
+<mat-card class="reportHeader">
+        <span class="subheading">
+             <a> &nbsp; Home &nbsp; </a>  /
+              <p>&nbsp; Web Management </p></span>
+    </mat-card>
+<div class="layout">
+<mat-card class="main">
+        <div [routerLink]="['template-management']" class="textDecor" routerLinkActive="activeLink">Template Management</div><br>
+        <div [routerLink]="['page-management']" class="textDecor" routerLinkActive="activeLink">Page Management</div>
+</mat-card>
+<div class="router">
+<router-outlet></router-outlet>
+</div>
+</div>

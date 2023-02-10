@@ -1,0 +1,59 @@
+<div class="container"> 
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName">
+      <div class="img">
+        <img src="assets/livia.png" alt="logo">
+      </div>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true" class="navHeadings">
+      <a mat-button [routerLink]="['/imagingRequest']" routerLinkActive="tab" class="headerText1">Lab Requests</a>
+      <a mat-button  [routerLink]="['/imagingReports']" routerLinkActive="tab" class="headerText1">Lab Reports</a>
+      <a mat-button  [routerLink]="['/eClaims']" routerLinkActive="tab" class="headerText2">E-Claims</a>
+      <a mat-button  [routerLink]="['/imagingTests']"routerLinkActive="tab" class="headerText2">Lab Tests</a>
+      <a mat-button  [routerLink]="['/payment']" routerLinkActive="tab" class="headerText2">Payments</a>
+      <a mat-button  [routerLink]="['/web/template-management']" routerLinkActive="tab" class="headerText2">WebManagement</a>
+    </div>
+    <div class="icon">
+      <img [src]="logoImg" alt="logo Icon" (click)="navigateToProfile()" id="showLogo">
+      &nbsp;
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon class="arrowIcon">arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/profile']">
+          <mat-icon>assignment_ind</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item (click)="openConfirmDialog()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav  #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-lg="true">
+      <div fxLayout="column">
+        <a mat-button [routerLink]="['/imagingRequest']" (click)="sidenav.close()">Lab Requests</a>
+      <a mat-button  [routerLink]="['/imagingReports']"(click)="sidenav.close()" >Lab Reports</a>
+      <a mat-button  [routerLink]="['/eClaims']" (click)="sidenav.close()">E-Claims</a>
+      <a mat-button  [routerLink]="['/imagingTests']" (click)="sidenav.close()">Lab Tests</a>
+      <a mat-button  [routerLink]="['/payment']" (click)="sidenav.close()">Payments</a>
+      <a mat-button  [routerLink]="['/web/template-management']" (click)="sidenav.close()">Web <br>Management</a>
+
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+
+</div>
+
+

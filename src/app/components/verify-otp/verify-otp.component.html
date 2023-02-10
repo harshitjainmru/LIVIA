@@ -1,0 +1,19 @@
+<section>
+    <div class="test">
+    <h1>Verify OTP</h1>
+</div>
+<mat-icon id="close-icon" (click)="onNoClick()">highlight_off</mat-icon>
+<h4>Please insert the one time password sent to the user's phone <br> number to accept the lab request.</h4>
+<div class="otp">
+    <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="config"></ng-otp-input>
+</div>
+<div class="content">
+<span>Not recieved yet?<a (click)="resendCode()">Resend</a></span>
+<!-- <p *ngIf="resend">Resend Code in {{count}} sec </p> -->
+</div>
+    <div class="btn">
+    <button  id="cancelBtn" (click)="onNoClick()">Cancel</button>
+    <button id="proBtn" (click)="confirm()" [disabled]="disable_btn">Confirm OTP</button>
+    <!-- (click)="openDialog()" -->
+</div>
+</section>

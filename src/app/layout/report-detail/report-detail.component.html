@@ -1,0 +1,105 @@
+<mat-card class="reportHeader">
+    <span class="subheading">
+         <a (click)="navigateToHome()"> &nbsp; Home &nbsp; </a>  /
+         <a (click)="navigateToLabReport()"> &nbsp; Lab Reports &nbsp; </a> /
+          <p>&nbsp; Report Detail </p></span>
+</mat-card>
+<div class="container">
+
+    <section>
+        <div class="spin">
+            <mat-spinner [diameter]="100" *ngIf="spinner"></mat-spinner>
+        </div>
+
+
+        <div class="heading">
+            <h1>Report Detail</h1>
+        </div>
+        <form  [formGroup]="detailForm">
+        <div class="detail">
+            <div class="box claimData">
+                <h3>Claim: {{reportData?.claim_id}} </h3>
+                <h3>Date: {{reportData?.claim_date}}</h3>
+                <h3>Status: {{reportData?.lab_status | statusPipe:"report"}}</h3>
+            </div>
+            <div class="box info">
+                <img [src]="img + reportData?.doctor_image" alt="DrImg">
+                <div class="data">
+                    <h3>Doctor:{{reportData?.doctor_name}}</h3>
+                    <h3>Ph. No.: +{{reportData?.doctor_phone}} </h3>
+                    <h3>Email: {{reportData?.doctor_email}} </h3>
+                </div>
+            </div>
+            <div class="box info">
+                <img [src]="img + reportData?.patient_image" alt="PatientImg">
+                <div class="data">
+                    <h3>Patient: {{reportData?.patient_name}}</h3>
+                    <h3>Ph. No.: +{{ reportData?.patient_phone}} </h3>
+                    <div class="email">
+                        <mat-form-field appearance="outline">
+                            <input matInput formControlName="email" placeholder="email" required>
+                            <mat-error *ngIf="detailForm?.controls?.email?.errors?.pattern">*Enter Correct Email</mat-error>
+                        </mat-form-field>
+                        <button [disabled]="detailForm?.controls?.email?.invalid" (click)="setEmail()" type="button" mat-raised-button>
+                            Add Email <mat-spinner [diameter]="40" *ngIf="emailData"></mat-spinner>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="heading">Lab Tests</h3>
+        <div class="test" *ngFor="let item of reportData?.test_details; let i=index">
+            <div class="box left">
+                <div class="data">
+                    <!-- <h3>{{reportData?.test_details[0].test_name}}</h3>
+                     -->
+                     <h3>{{i+1}} {{item?.test_name}}</h3>
+                    <h3>58 Sec</h3>
+                </div>
+            </div>
+            <div class="box right">
+                <div class="first">
+                    <h3>Upload Report</h3>
+                    <button mat-button>Accepted</button>
+                </div>
+                <div class="labPhoto">
+                    <div class="images"  >
+                    <div class="photo" (click)="snack()" >
+                        <button type="button" mat-button (click)="fileInput2.click()" [disabled]="payLoadData.length>4"><mat-icon class="icon">add</mat-icon>
+                            <input #fileInput2 type="file" style="display:none;"(change)="onFileChange($event,'document')"/>
+                        </button>
+                      </div>
+                      <span id="spin"><mat-spinner *ngIf="spinner" [diameter]="30"></mat-spinner></span>
+                      <div class="arrImg">
+                        <ng-container *ngFor="let url of payLoadData; let i= index">
+                          <div class="preview">
+                            <a (click)="deleteImg(i)">
+                              <i class="fas fa-times-circle"></i>
+                            </a>
+                          <img [src]="img+url" alt="">
+                        </div>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+                <div class="notes">
+                    <h3>Add Notes</h3>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <textarea matInput rows="6" placeholder="Add notes here....."
+                            formControlName="notes"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="btn">
+                    <button type="button" mat-raised-button (click)="saveData(i)">
+                        Save
+                    </button>
+                    <button type="submit" (click)="sendReport()" mat-raised-button [disabled]="this.detailForm.invalid">
+                        <ng-container>Send To Doctor</ng-container>
+                        <!-- <mat-spinner [diameter]="40"></mat-spinner> -->
+                    </button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </section>
+</div>

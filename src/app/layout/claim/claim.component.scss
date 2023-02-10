@@ -1,0 +1,79 @@
+@import "/src/app/CommonScss/pagination.scss";
+@import "/src/app/CommonScss/table.scss";
+@import "/src/app/CommonScss/subHeading.scss";
+@import "/src/app/CommonScss/overrideStyling.scss";
+@import '/src/app/CommonScss/snackBar.scss';
+
+
+$width: 200px;
+.container {
+  background-color: #edf0f2;
+
+  section {
+    margin: 1% 0% 0% 5.6%;
+    .heading {
+      h1 {
+        color: #1a1d6c;
+        font-weight: 500;
+        font-size: 35px;
+        margin: 30px 0px 25px 0px;
+
+
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .field1 {
+        width: 250px;
+        position: relative;
+
+        .searchIcon {
+          position: absolute;
+          left: 0;
+          font-size: 25px;
+          margin-top: -3%;
+        }
+      }
+      .input {
+        margin-right: 8%;
+        .field2 {
+          width: $width;
+        }
+        .field3 {
+          width: $width;
+        }
+        .cancel {
+          position: absolute;
+          right: 0px;
+          bottom: 12px;
+          color: dimgray;
+        }
+        .field4 {
+          width: $width;
+        }
+        .field5 {
+          width: $width;
+        }
+      }
+    }
+    #createBtn{
+      float: right;
+      margin: 0px 140px 10px 0px;
+      width: 150px;
+      height: 40px;
+      font-weight: 800;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #edf0f2;
+      background-image: linear-gradient(to right, #1a1d6c, #00b790);
+      
+    }
+  }
+
+  input.mat-input-element {
+    margin-left: 12%;
+    color: black;
+  }
+}
+

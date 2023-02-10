@@ -1,0 +1,33 @@
+.content {
+  margin-left: 20px;
+}
+
+.content h1 {
+  color: #1b006b;
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.content .active-link {
+  color: #00b790;
+  border-bottom: 2px solid #00b790;
+}
+
+.content nav {
+  border-bottom: none;
+}
+
+.content .mat-tab-link:focus {
+  color: #00b790;
+  border-bottom: 2px solid #00b790;
+}
+
+:host .mat-tab-link {
+  min-width: 10px;
+}
+
+::ng-deep .mat-tab-links {
+  margin-left: -20px;
+}
+/*# sourceMappingURL=onboarding.component.css.map */

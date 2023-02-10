@@ -1,0 +1,95 @@
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1.5% 0% -5% -5%;
+}
+
+section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  padding-top: 20px;
+}
+
+section form label {
+  font-weight: 700;
+}
+
+section form ::ng-deep .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+
+section form .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+section form .nav a {
+  color: blue;
+  cursor: pointer;
+}
+
+section form .nav button {
+  width: 50%;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  padding: 5px;
+  font-size: 18px;
+}
+
+section form .nav button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00b790), to(#1a1d6c));
+  background-image: linear-gradient(to right, #00b790, #1a1d6c);
+}
+
+:host .mat-form-field {
+  border-radius: 60px;
+}
+
+:host .mat-error {
+  font-size: 12px;
+  margin-left: -8px;
+  margin-top: -1px;
+}
+
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #f3f3f3;
+}
+
+::ng-deep .mat-spinner {
+  position: relative;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+@media (max-width: 600px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=login.component.css.map */

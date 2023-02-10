@@ -1,0 +1,112 @@
+.main h2 {
+  color: #334fbb;
+}
+
+.main .photo {
+  background-color: lightgray;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.main .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.main .bottom button {
+  width: 50%;
+  height: 50px;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  padding: 5px;
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+}
+
+.main .bottom button:disabled {
+  font-weight: 200;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.main .bottom button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00b790), to(#1a1d6c));
+  background-image: linear-gradient(to right, #00b790, #1a1d6c);
+}
+
+.preview {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.preview a {
+  position: absolute;
+  z-index: 1;
+  margin-left: 65px;
+}
+
+.preview a mat-icon {
+  color: black;
+}
+
+.preview a:hover {
+  cursor: pointer;
+}
+
+.preview img {
+  height: 80px;
+  width: 80px;
+  border-radius: 10px;
+}
+
+.arrImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 15px;
+}
+
+i {
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: -5px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.images img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+:host .icon {
+  width: 25px;
+  height: 25px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+/*# sourceMappingURL=add-lab-pic.component.css.map */

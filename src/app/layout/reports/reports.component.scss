@@ -1,0 +1,93 @@
+@import "/src/app/CommonScss/pagination.scss";
+@import "/src/app/CommonScss/table.scss";
+@import "/src/app/CommonScss/overrideStyling.scss";
+@import "/src/app/CommonScss/subHeading.scss";
+$width: 200px;
+@mixin  statusColor {
+  padding: 10px;
+  border-radius: 150px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.container {
+  background-color: #edf0f2;
+  section {
+    margin: -0.2% 0% 0% 5.6%;
+    .heading {
+      h1 {
+        color: #1a1d6c;
+        font-weight: 500;
+        font-size: 35px;
+        margin: 30px 0px 25px 0px;
+
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -1%;
+      .field1 {
+        width: 350px;
+        position: relative;
+
+        .searchIcon {
+          position: absolute;
+          left: 0;
+          font-size: 25px;
+          margin-top: -3%;
+        }
+      }
+      .input {
+        margin-right: 8.3%;
+        .field2 {
+          width: $width;
+        }
+        .field3 {
+          width: $width;
+        }
+        .cancel {
+          position: absolute;
+          right: 0px;
+          bottom: 12px;
+          color: dimgray;
+        }
+        .field4 {
+          width: $width;
+        }
+        .field5 {
+          width: $width;
+        }
+      }
+    }
+    table {
+      margin-top: -0.5%;
+      .testname {
+        width: 500px;
+      }
+    }
+  }
+  .status_style{
+    color: #3ebef2;
+    background-color: #eff5fa;
+    cursor: pointer;
+
+    @include statusColor();
+    }
+  .status_style1{
+    color: #5ada9e;
+    background-color: #eefcf7;
+    pointer-events: none;
+    cursor: not-allowed;
+    
+    @include statusColor();
+   
+    }
+
+  input.mat-input-element {
+    margin-left: 12%;
+    color: black;
+  }
+}
+
+

@@ -1,0 +1,21 @@
+<section>
+
+  <div class="step">
+
+      <p *ngIf="!(stepper.selectedIndex==0)" class="back-btn">
+        <span class="material-icons" (click)="goBack(stepper)"> keyboard_backspace </span>
+      </p>
+
+
+
+      <mat-stepper class="stepper" #stepper>
+        <ng-template matStepperIcon="edit" class="iconChange">
+          <mat-icon>done</mat-icon>
+        </ng-template>
+          <mat-step><app-add-lab-detail></app-add-lab-detail> </mat-step>
+          <mat-step><app-add-doc></app-add-doc></mat-step>
+          <mat-step><app-add-lab-pic></app-add-lab-pic></mat-step>
+        </mat-stepper>
+  </div>
+</section>
+

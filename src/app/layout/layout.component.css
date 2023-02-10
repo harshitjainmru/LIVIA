@@ -1,0 +1,105 @@
+.container {
+  background-color: #edf0f2;
+  height: 100%;
+}
+
+.container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  height: 60px;
+}
+
+.container .logo .img {
+  margin-top: 0.3%;
+}
+
+.container .logo img {
+  width: 150px;
+  height: 50px;
+  margin-left: 50%;
+}
+
+.container .path {
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+  color: white;
+}
+
+.container .path span {
+  font-size: 20px;
+}
+
+.container .path .icon {
+  margin-right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .path .mat-icon {
+  font-size: 40px;
+}
+
+a {
+  width: 150px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
+
+.tab {
+  padding: 1.5%;
+  position: relative;
+  background: #fff;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tab:before,
+.tab:after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 20px;
+  bottom: 0;
+}
+
+.tab:after {
+  right: -20px;
+  border-radius: 0 0 0 10px;
+  -webkit-box-shadow: -10px 0 0 0 #fff;
+          box-shadow: -10px 0 0 0 #fff;
+}
+
+.tab:before {
+  left: -20px;
+  border-radius: 0 0 10px 0;
+  -webkit-box-shadow: 10px 0 0 0 #fff;
+          box-shadow: 10px 0 0 0 #fff;
+}
+
+:host a.tab {
+  color: #00b790;
+}
+
+.btn-dialog-close {
+  width: 45px;
+  min-width: 0px !important;
+  height: 40px;
+  padding: 0px !important;
+}
+/*# sourceMappingURL=layout.component.css.map */

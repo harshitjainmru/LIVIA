@@ -1,0 +1,152 @@
+.container{
+  // background-color: #edf0f2;
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #1a1d6c, #00b790);
+    height: 60px;
+    .img{
+      margin-top: 0.3%;
+
+    }
+    img{
+      width: 150px;
+      height: 50px;
+      margin-left:50%;
+    }
+  }
+      #showLogo{
+      border-radius: 50px;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+    }
+     .arrowIcon {
+      line-height: 0px;
+      font-size: 45px;
+      margin-left: -30px;
+      margin-top: -13px;
+     }
+
+}
+a{
+  width: 160px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+
+}
+.tab{
+
+  padding: 9px;
+  position: relative;
+
+  background: #fff;
+  border: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.tab:before,
+.tab:after {
+  content: "";
+  position: absolute;
+
+  height: 10px;
+  width: 20px;
+
+  bottom: 0;
+}
+
+.tab:after{
+  right: -20px;
+  border-radius: 0 0 0 10px;
+  box-shadow: -10px 0 0 0 #fff;
+}
+
+.tab:before {
+  left: -20px;
+  border-radius: 0 0 10px 0;
+  box-shadow: 10px 0 0 0 #fff;
+}
+:host{
+  a.tab{
+    color: #00b790;
+  }
+}
+.mat-toolbar {
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+}
+
+.mat-sidenav-container {
+  height: 100%;
+  background-color: #edf0f2;
+  position: unset;
+}
+.example-container {
+  a:hover {
+      background-color: #fff;
+  }
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.navHeadings {
+  margin: 10px 60px 0px 0px;
+}
+::ng-deep .mat-drawer-inner-container {
+  background-color: #afd8cf;
+  a{
+  border-bottom: 2px solid white;
+  color: black;
+  padding: 30px 40px ;
+  }
+ 
+}
+
+.btn-dialog-close{
+  width: 45px;
+  min-width: 0px !important;
+  height: 40px;
+  padding: 0px !important;
+}
+
+
+@media only screen and(min-width:900px) and(max-width: 1300px) {
+  a{
+    width: 100px;
+    font-size:15px ;
+  }
+  .icon{
+    margin-right: 0px;
+  }
+  .tab {
+      padding: 2%;
+  }
+  .navHeadings {
+      margin: 10px 30px 0px 0px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container {
+      .img {
+          img {
+              width: 100px;
+              height: 65px;
+              margin-left: 0px;
+          }
+      }
+      .icon{
+        margin-right: -10px;
+      }
+  }
+}
+
+

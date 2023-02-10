@@ -1,0 +1,133 @@
+
+
+.container{
+    background-color: #edf0f2;
+    height: 100%;
+    .logo{
+      display: flex;
+      justify-content: space-between;
+      background-image: linear-gradient(to right, #1a1d6c, #00b790);
+      height: 60px;
+      cursor: pointer;
+      .img{
+        margin-top: 0.3%;
+  
+      }
+      img{
+        width: 150px;
+        height: 50px;
+        margin-left:50%;
+      }
+    }
+    .path{
+      margin-top: 1%;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: white;
+      span{
+        font-size: 20px;
+      }
+  
+      .icon{
+        margin-right: 80px;
+        display: flex;
+      }
+      .mat-icon{
+        font-size: 40px;
+  
+      }
+  }
+  
+  }
+  a{
+    width: 150px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+  
+  }
+  .tab{
+  
+    padding: 1.5%;
+    position: relative;
+  
+    background: #fff;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  
+  }
+  
+  .tab:before,
+  .tab:after {
+    content: "";
+    position: absolute;
+  
+    height: 10px;
+    width: 20px;
+  
+    bottom: 0;
+  }
+  
+  .tab:after{
+    right: -20px;
+    border-radius: 0 0 0 10px;
+    box-shadow: -10px 0 0 0 #fff;
+  }
+  
+  .tab:before {
+    left: -20px;
+    border-radius: 0 0 10px 0;
+    box-shadow: 10px 0 0 0 #fff;
+  }
+  :host{
+    a.tab{
+      color: #00b790;
+    }
+  }
+  
+  
+  .btn-dialog-close{
+    width: 45px;
+    min-width: 0px !important;
+    height: 40px;
+    padding: 0px !important;
+  }
+  
+  
+
+span{
+  font-size: 15px;
+  display:inline-flex;
+  p{
+  color: #3932b9;
+  font-weight: 800;
+  height: 5px;
+
+ }
+}
+section{
+  .content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      text-align: center;
+      img{
+          width: 150px;
+          height: 150px;
+      }
+      h1{
+          color: #2e1b77;
+          font-size: 28px;
+          font-weight: 550;
+      }
+      p{
+          color: gray;
+      }
+  }
+}
+

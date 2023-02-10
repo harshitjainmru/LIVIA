@@ -1,0 +1,107 @@
+
+<div class="container">
+  <mat-card class="reportHeader">
+      <span class="subheading"><a class="home" (click)="navigateToHome()">Home /</a> 
+        <a class="home" (click)="navigateToProfile()">My Profile / </a><p>&nbsp; Edit </p></span>
+  </mat-card>
+  <section>
+      
+          <div class="heading">
+              <h1>Edit Profile</h1>
+          </div>
+          <mat-card class="main">
+  
+            <form [formGroup]="editFrom" (ngSubmit)=updateUser()>
+              <h1>Add Logo</h1>
+              <div class="preview" >
+                <div class="edit" *ngIf="!deleteProfile">
+                    <a (click)="deleteImg('delProfile')">
+                        <mat-icon class="loc">cancel</mat-icon>
+                    </a>
+                    <img [src]=imgUrl+editFrom?.controls?.avatar?.value alt="Logo Image" *ngIf="!spinner">
+                </div>
+                <!-- <span id="spin"><mat-spinner *ngIf="spinner1" [diameter]="30"></mat-spinner></span> -->
+                <div class="photo" *ngIf="deleteProfile">
+                    <button type="button" class="add" mat-button (click)="fileInput1.click()"><mat-icon class="icon">add</mat-icon>
+                        <input #fileInput1 id="file" multiple=""  type="file" style="display:none;"
+                            (change)="onFileChange($event,'profile')" />
+                    </button>
+                </div>
+            </div>
+              <div class="userDetail">
+                  <div class="field1">
+                      <label>Lab Name</label>
+  
+                      <mat-form-field appearance="outline">
+                          <input matInput formControlName="lab_name" required  >
+                          <mat-error *ngIf="editFrom?.controls?.lab_name?.errors?.required">*Name is required
+                        </mat-error>
+
+                      </mat-form-field>
+                  </div>
+                  <div class="field1">
+  
+                      <label>Contact Number</label>
+                      <mat-form-field appearance="outline">
+                          <input matInput formControlName="phone_number" required>
+                      </mat-form-field>
+                  </div>
+                  <div class="field1">
+                      <label>Address</label>
+                      <mat-form-field appearance="outline" >
+                          <input matInput  formControlName="physical_address" required readonly>
+                          <a>
+                          <mat-icon (click)="openDialog()"> near_me</mat-icon></a>
+                      </mat-form-field>
+                  </div>
+                  </div>
+                  <div class="otherDetails">
+                  <div class="field1">
+                      <label>County</label>
+                      <mat-form-field appearance="outline" >
+                        <mat-select placeholder="Select County" formControlName="county">
+                          <mat-option value="">None</mat-option>
+                          <mat-option *ngFor="let citie of country_data" [value]=citie>
+                              {{citie.name}}
+                          </mat-option>
+                      </mat-select>
+                      </mat-form-field>
+                  </div>
+                  <div class="field6">
+                      <label>Bio</label>
+                      <mat-form-field appearance="outline" class="textareaInput">
+                      <textarea placeholder="Enter here"  
+                       matInput formControlName="lab_bio"></textarea>
+                  </mat-form-field>
+                  </div>
+              </div>
+              <div class="labPhoto">
+                  <h2  >Add Lab Photos</h2>
+                  <div class="images"  >
+                  <div class="photo" (click)="snack()">
+                      <button type="button" mat-button (click)="fileInput2.click()" [disabled]="payLoadData.length>4"><mat-icon class="icon">add</mat-icon>
+                          <input #fileInput2 type="file" style="display:none;"(change)="onFileChange($event,'document')"/>
+                      </button>
+                    </div>
+                    <span id="spin"><mat-spinner *ngIf="spinner" [diameter]="30"></mat-spinner></span>
+                    <div class="arrImg">
+                      <ng-container *ngFor="let url of payLoadData; let i= index">
+                        <div class="preview">
+                          <a (click)="deleteImg(i)">
+                            <i class="fas fa-times-circle"></i>
+                          </a>
+                        <img [src]="imgUrl+url" alt="">
+                      </div>
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="btn">
+                  <button id="cancelBtn" type="button" [routerLink]="['/profile']">Cancel</button>&nbsp;
+                  <button id="updateBtn" type="submit">Update</button>
+              </div>
+          </form>
+          </mat-card>
+  </section>
+  </div>

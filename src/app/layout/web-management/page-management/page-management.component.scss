@@ -1,0 +1,130 @@
+$shadow: 5px 5px 5px -3px grey, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+$backgroundColor: linear-gradient(to right, #1a1d6c, #00b790);
+$padding:30px 25px 60px 25px;
+
+@mixin btnStyle {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 30px 10px 20px;
+
+}
+section {
+    .heading {
+        color: darkblue;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .submitBtn {
+        float: right;
+        background-image: $backgroundColor;
+        margin-top: 10px;
+        @include btnStyle();
+    }
+    .aboutUs {
+        box-shadow: $shadow;
+        padding: $padding;
+    }
+    .statement {
+        box-shadow: $shadow;
+        padding: $padding;
+        margin-top: 20px;
+        .textarea{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .faq {
+        box-shadow: $shadow;
+        padding: $padding;
+        margin-top: 20px;
+        .faqrow1 {
+            display: grid;
+            grid-template-columns: auto auto;
+            .question {
+                display: flex;
+            }
+            .btngrp {
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+                margin: 10px 5px;
+                .edit {
+                    background-image: $backgroundColor;
+                    padding: 5px 30px 10px 30px;
+                    margin-top: -5px;
+                    @include btnStyle();
+                }
+                .delete {
+                    background-color: red;
+                    padding: 5px 30px 10px 30px;
+                    margin-top: -5px;
+                    font-weight: 500;
+                    @include btnStyle();
+                }
+            }
+        }
+    }
+    .contact {
+        margin-top: 20px;
+        box-shadow: $shadow;
+        padding: 30px 50px 60px 50px;
+        .emailInput{
+            display: flex;
+            gap: 20px;
+            ::ng-deep .mat-form-field-infix{
+                width: 500px;
+            }
+            .add{
+                background-image: $backgroundColor;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                gap: 20px;
+                font-size: 20px;
+                padding: 10px 25px;
+                margin-bottom: 25px;
+            }
+        }
+        table {
+            width: 100%;
+            padding: 20px;
+            background-color: #edf0f2;
+            border-radius: 5px;
+            .mat-header-row{
+                box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+                background-color: white;
+                border-radius: 5px;
+                border-bottom: none;
+          
+              }
+              th.mat-header-cell{
+                color: darkblue;
+                font-weight: 900;
+                font-size: 16px;
+                border: none;
+                text-align: center;
+              }
+              .mat-cell{
+                border: 1px solid lightslategray;
+                text-align: center;
+              }
+        .delete {
+            background-color: red;
+            padding: 5px 20px;
+            @include btnStyle();
+        }
+    }
+    }
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+    box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
+    background-color: white;
+  }
+  @media only screen  and(max-width: 860px){
+   .emailInput{
+       flex-direction: column;
+   }
+  }

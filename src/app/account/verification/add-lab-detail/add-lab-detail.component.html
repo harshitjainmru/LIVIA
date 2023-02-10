@@ -1,0 +1,56 @@
+<section>
+  <form [formGroup]="service.registrationForm" (ngSubmit)="onSubmit()">
+    <h1>Add Lab Profile details</h1>
+    <div class="content" formGroupName="profileDetails">
+        <div class="logo" *ngIf="btn" >
+          <button type="button" mat-button (click)="fileInput1.click()">
+            <mat-icon class="icon">add</mat-icon>
+            <input #fileInput1 type="file" class="files_display" (change)="onFileChange($event);"
+              formControlName="avatar" />
+            </button>
+            <p>Add Logo</p>
+         
+          </div>
+          <div class="preview" *ngIf="!btn">
+            <a (click)="deleteImg()">
+              <i class="fas fa-times-circle"></i>
+            </a>
+            <!-- <mat-spinner [diameter]="20" *ngIf="!spinner"></mat-spinner> -->
+        <img [src]="img + this.profileForm.get('avatar')?.value" alt="logo">
+        
+      </div>
+      <label>Lab Name</label>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="name" formControlName="lab_name" required>
+        <!-- <mat-error *ngIf="registrationForm?.controls?.lab_name?.errors?.required">*Name is required</mat-error> -->
+        <mat-error *ngIf="this.profileForm.get('lab_name')?.errors?.required">Name is required</mat-error>
+        <mat-error *ngIf="this.profileForm.get('lab_name')?.errors?.pattern">Space not allowed</mat-error>
+      </mat-form-field>
+      <label>County</label>
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="Select Country" formControlName="physical_address">
+          <mat-option *ngFor="let item of country_data" value="item">{{item.name}}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="this.profileForm.get('physical_address')?.errors?.required">*Select country</mat-error>
+      </mat-form-field>
+      <label>Address</label>
+      <mat-form-field appearance="outline">
+        <a (click)="openDialog()">
+          <mat-icon class="loc">near_me</mat-icon>
+        </a>
+        <input matInput placeholder="Start typing your Address" formControlName="address" required readonly>
+        <mat-error *ngIf="this.profileForm.get('address')?.errors?.required">*Address is required</mat-error>
+        <mat-error *ngIf="this.profileForm.get('address')?.errors?.pattern">Space not allowed</mat-error>
+      </mat-form-field>
+      <div class="nav">
+        <button mat-raised-button *ngIf="service.formControls?.profileDetails?.invalid" (click)="errorMessage()">Save
+          and Next</button>
+        <button mat-raised-button *ngIf="service.formControls?.profileDetails?.valid" matStepperNext>
+
+          <ng-container *ngIf="!spinner">Save and Next</ng-container>
+          <mat-spinner *ngIf="spinner"></mat-spinner>
+        </button>
+      </div>
+    </div>
+  </form>
+</section>

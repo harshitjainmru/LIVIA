@@ -1,0 +1,29 @@
+<form [formGroup]="service.registrationForm" (ngSubmit)="onSubmit()">
+<div class="main" >
+
+  <h2  >Add Lab Photos</h2>
+  <div class="images"  >
+  <div class="photo" (click)="snack()">
+      <button type="button" mat-button (click)="fileInput1.click()" [disabled]="images.length>4"><mat-icon class="icon">add</mat-icon>
+          <input #fileInput1 type="file" class="files_display" (change)="onFileChange($event)"/>
+      </button>
+    </div>
+    <span id="spin"><mat-spinner *ngIf="spinner" [diameter]="30"></mat-spinner></span>
+    <div class="arrImg">
+      <ng-container *ngFor="let url of images; let i= index">
+        <div class="preview">
+          <a (click)="deleteImg(i)">
+            <i class="fas fa-times-circle"></i>
+          </a>
+        <img [src]="url" alt="">
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+    <div class="bottom">
+      <button mat-button type="submit" [disabled]="this.payLoadData.length==0"  matStepperNext>Send for validation</button>
+  </div>
+</div>
+
+</form>

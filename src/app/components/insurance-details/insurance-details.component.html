@@ -1,0 +1,48 @@
+<section>
+    <div class="test">
+        <h1>Insurance Details</h1>
+    </div>
+    <mat-icon id="close-icon" (click)="onNoClick()">highlight_off</mat-icon>
+    <div class="container">
+        <mat-card>
+            <div class="img">
+                <img [src]="(imageURL + profileData?.insurance_company_member_card)" alt="insurance_company_member_card-img">
+            </div>
+            <h4>Membership Card</h4>
+        </mat-card>
+        <mat-card>
+            <div class="img">
+                <img [src]="(imageURL + profileData?.photo_id_number_frontend)"  alt="photo_id_number_frontend-img">
+            </div>
+            <h4>Member's ID photo front</h4>
+        </mat-card>
+        <mat-card>
+            <div class="img">
+                <img [src]="(imageURL + profileData?.photo_id_number_backend)"  alt="photo_id_number_backend-img">
+            </div>
+            <h4>Member's ID photo back</h4>
+        </mat-card>
+        <mat-card>
+            <div class="img">
+                <img [src]="(imageURL + profileData?.insurance_company_selfie)"  alt="insurance_company_selfie-img">
+            </div>
+            <h4>Member's Photo with <br>Membership Card</h4>
+        </mat-card>
+    </div>
+    <div class="container2">
+        
+        <mat-checkbox [(ngModel)]="disable_btn"> 
+            I have verified the insurance details
+        </mat-checkbox>
+       
+            <span>OTP will be sent to the patient. Please get the OTP from patient.</span>
+    </div>
+    <div class="btn">
+        <button  id="cancelBtn" (click)="onNoClick()">Cancel</button>
+        <button id="proBtn" (click)="sendOTP()" [disabled]="!disable_btn">
+            <ng-container *ngIf="!spinner">Send OTP</ng-container>
+            <mat-spinner *ngIf="spinner" [diameter]="30"></mat-spinner>
+            </button>
+        <!-- (click)="openDialog()" -->
+    </div>
+</section>

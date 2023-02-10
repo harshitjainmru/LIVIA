@@ -1,0 +1,12 @@
+::ng-deep snack-bar-container.snackBar {
+    background: rgb(197, 246, 197);
+    color: black;
+    font-size: 20px;
+  }
+::ng-deep snack-bar-container.errSnackbar {
+    background: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+  }

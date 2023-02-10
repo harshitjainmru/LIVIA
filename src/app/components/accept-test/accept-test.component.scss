@@ -1,0 +1,135 @@
+@import '/src/app/CommonScss/table.scss';
+section{
+    background-color: #ebeff0;
+    height: 100%;
+    .test{
+        display: flex;
+        justify-content: center;
+        background-color: #007b81;
+        h2{
+            
+            color: white;
+        }
+    }
+    #close-icon{
+      float: right;
+    margin-top: -49px;
+    margin-right: 14px;
+    font-size: 38px;
+    color: white;
+    cursor: pointer;
+    }
+    .mat-card{
+      margin-top: 10px;
+      margin: 40px;
+      background-color: #ebeff0;
+      border-radius: 5px;
+      box-shadow: 5px 5px 5px -3px grey, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+      .loader{
+          display: flex;
+          justify-content: center;
+         
+      .pulse-loader {
+          display: flex;
+          align-items: center;
+          margin: 10px;
+        
+          > div {
+            background-color: currentColor;
+            margin-right: 5%;
+            width: 30%;
+            height: 100%;
+            border-radius: 100%;
+            animation: pulse 1s ease infinite;
+        
+            &:nth-child(2) {
+              animation-delay: 100ms;
+            }
+        
+            &:nth-child(3) {
+              margin-right: 0;
+              animation-delay: 200ms;
+            }
+          }
+        }
+        
+        @keyframes pulse {
+          0%, 60%, 100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        
+          30% {
+            opacity: .1;
+            transform: scale(.01);
+          }
+        }
+      }
+  }    
+    table{
+    width: 600px;
+      th:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+    th:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+    td:first-child {
+      
+      border-radius: 10px 0 0 10px;
+    }
+    td:last-child {
+    border-radius: 0 10px 10px 0;
+      
+    }
+    #status_style{
+    color: skyblue;
+    padding: 10px;
+    background-color: #eff5fa;
+    border-radius: 150px;
+    margin-top: 5px;
+    }
+  } 
+    h4{
+        color: red;
+        margin: -31px 0px 1px 45px;
+        font-weight: 400;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding:0px 0px 60px 0px;
+        button{
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+            width: 100px;
+            padding: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        #cancelBtn{
+         background-color: #929292 ;  
+         cursor: pointer;
+        }
+        
+        #proBtn{
+        background-image: linear-gradient(to right, #1a1d6c, #00b790);
+        cursor: pointer;
+        &:disabled{
+            cursor: not-allowed;
+        }
+
+        }
+       
+    }
+}
+::ng-deep{
+    .mat-dialog-container{
+        padding: 0px;
+    }
+ 
+}
+

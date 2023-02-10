@@ -1,0 +1,21 @@
+/**@description this is dynamic route*/
+export const NAV_TO_LOGIN ='login'
+
+export const NAV_TO_SIGNUP ='signup'
+export const NAV_TO_LAB_REQUEST='imagingRequest'
+export const NAV_TO_LAB_REPORT='imagingReports'
+export const NAV_TO_REPORT_DETAIL='reportDetail'
+export const NAV_TO_ECLAIM='eClaims'
+export const NAV_TO_CREATE_ECLAIM='create-eclaim'
+export const NAV_TO_LAB_TEST='imagingTests'
+export const NAV_TO_PAYMENT='payment'
+export const NAV_TO_INITIATE_PAYMENT='review-claim'
+export const NAV_TO_PROFILE='profile'
+export const NAV_TO_EDIT_PROFILE='editProfile'
+export const NAV_TO_VALIDATION='validation'
+export const NAV_TO_REGISTRATION='create-account/:data'
+export const NAV_TO_RESET_PASSWORD='reset-password/:token/:email'
+export const NAV_TO_TEMPLATE='template-management'
+export const NAV_TO_PAGE='page-management'
+export const NAV_TO_WEB='web'
+

@@ -1,0 +1,66 @@
+section {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+section .box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+section .box .banner {
+  border-radius: 10px 0 0 10px;
+  background: url("../../assets/banner.png") left top no-repeat;
+  width: 420px;
+}
+
+section .box .content {
+  height: 500px;
+  overflow-y: scroll;
+  background-color: #ebeff0;
+  width: 480px;
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 500px) {
+  section .box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+}
+
+section .box ::-webkit-scrollbar {
+  width: 10px;
+}
+
+section .box ::-webkit-scrollbar-track {
+  background: #dddcdc;
+  border-radius: 0 10px 10px 0;
+}
+
+section .box ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
+
+section .box ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*# sourceMappingURL=account.component.css.map */

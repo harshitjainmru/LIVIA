@@ -1,0 +1,34 @@
+@mixin tab-style {
+      color: #00b790;
+      border-bottom: 2px solid #00b790;
+}
+.content{
+  margin-left: 20px;
+  h1 {
+      color: #1b006b;
+      font-weight: 500;
+      font-size: 30px;
+      margin-top: 30px;
+  }
+  .active-link{
+      @include tab-style();
+  }
+  nav {
+      border-bottom: none;
+  }
+  .mat-tab-link:focus{
+    @include tab-style();
+
+  }
+
+}
+:host{
+  .mat-tab-link{
+    min-width: 10px;
+  }
+
+}
+::ng-deep .mat-tab-links{
+  margin-left: -20px;
+}
+

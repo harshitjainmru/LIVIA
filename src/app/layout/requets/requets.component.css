@@ -1,0 +1,192 @@
+.container {
+  background-color: #edf0f2;
+}
+
+p {
+  color: #3932b9;
+  margin-left: 5%;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+section {
+  margin: 3% 0% 0% 5.9%;
+}
+
+section .heading h1 {
+  color: #1a1d6c;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .content .field1 {
+  width: 300px;
+  position: relative;
+  right: 0;
+}
+
+section .content .field1 .searchIcon {
+  position: absolute;
+  left: 0;
+  font-size: 25px;
+  margin-top: -3%;
+}
+
+section .content .input {
+  margin-right: 8.3%;
+}
+
+section .content .input .field2 {
+  width: 150px;
+}
+
+section .content .input .field3 {
+  width: 150px;
+}
+
+section .content .input .field4 {
+  width: 150px;
+}
+
+section #spin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section table {
+  width: 92%;
+  padding: 20px;
+  background-color: #edf0f2;
+  border-radius: 5px;
+}
+
+section table .mat-header-row {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  background-color: white;
+  border-radius: 5px;
+  border-bottom: none;
+}
+
+section table th.mat-header-cell {
+  color: darkblue;
+  font-weight: 900;
+  font-size: 16px;
+  border: none;
+  text-align: center;
+}
+
+section table .mat-cell {
+  border: none;
+  text-align: center;
+}
+
+section table .btn1 {
+  border: none;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  color: #11d49e;
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+          box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+}
+
+section table .btn2 {
+  border: none;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  color: white;
+  -webkit-box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+          box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+}
+
+section #noData {
+  text-align: center;
+  font-size: 20px;
+  padding: 5%;
+  font-weight: 550;
+}
+
+::ng-deep .mat-spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+input.mat-input-element {
+  margin-left: 20%;
+  color: black;
+}
+
+.paginator ::ng-deep .mat-paginator-container {
+  background-color: #edf0f2;
+}
+
+.paginator ::ng-deep .mat-paginator-icon {
+  color: #5a5757;
+  width: 20px;
+}
+
+.paginator ::ng-deep .mat-icon-button {
+  background-color: #edf0f2;
+  -webkit-box-shadow: 5px 5px 5px -3px #faefef, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+          box-shadow: 5px 5px 5px -3px #faefef, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+  margin: 10px;
+  margin-right: 0;
+  border-radius: 5px;
+}
+
+.paginator ::ng-deep .mat-paginator-range-label {
+  background-color: #e0f8f0;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px -3px #fffbfb, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+          box-shadow: 5px 5px 5px -3px #fffbfb, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+}
+
+.paginator ::ng-deep .mat-paginator-outer-container {
+  margin-top: 20px;
+}
+
+.paginator ::ng-deep .mat-select-panel[aria-label="none"] .mat-option-text {
+  font-size: 1.4rem;
+}
+
+.paginator ::ng-deep .mat-paginator-range-actions {
+  margin-right: 7.7%;
+}
+
+.paginator [hidden] {
+  display: none !important;
+}
+/*# sourceMappingURL=requets.component.css.map */

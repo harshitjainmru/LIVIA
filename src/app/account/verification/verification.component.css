@@ -1,0 +1,62 @@
+section {
+  margin-top: 5%;
+}
+
+section .stepper {
+  background-color: transparent;
+  color: gray;
+}
+
+section .step {
+  position: relative;
+}
+
+section .back-btn {
+  position: absolute;
+  left: 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #333;
+  cursor: pointer;
+  margin-top: 0.5%;
+  font-weight: bolder;
+}
+
+section .back-btn span {
+  font-size: 30px;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container {
+  padding-left: 257px;
+  height: 40px;
+  margin-right: 1%;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon {
+  background-color: gray;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container .mat-stepper-horizontal-line {
+  background-color: #5dd198;
+  width: 10px;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon-selected {
+  background-color: white;
+  color: #5dd198;
+  border: 1px solid #5dd198;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon-state-done, ::ng-deep .mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon-state-edit {
+  background-color: #5dd198;
+  color: white;
+}
+
+::ng-deep .mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon-state-done + .mat-step-label, ::ng-deep .mat-horizontal-stepper-header-container .mat-step-header .mat-step-icon-state-edit + .mat-step-label {
+  color: white !important;
+}
+/*# sourceMappingURL=verification.component.css.map */

@@ -1,0 +1,75 @@
+// @import "../../CommonScss/subHeading.scss";
+
+.subheading {
+    margin-left: 5%;
+    font-size: 15px;
+    display: inline-flex;
+    p {
+        color: #3932b9;
+        font-weight: 800;
+        height: 5px;
+    }
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 20% 75%;
+    padding: 10px 30px;
+    // margin-top: 30px;
+    .main {
+        box-shadow: 5px 5px 5px -3px grey, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+        background-color: #edf0f2;
+        padding: 0px;
+        width: 500px;
+        height: 130px;
+        margin: 5px 20px;
+
+        .mat-card > :last-child:not(.mat-card-footer) {
+            margin-bottom: 75px;
+        }
+        .textDecor {
+            text-decoration: none;
+            font-size: 20px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .activeLink {
+            background-color: #00ce97;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 20px;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    }
+    .router {
+        margin-left: 15%;
+    }
+}
+
+@media only screen and(max-width: 1760px) {
+    .layout {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        .main {
+            margin: 0px 0px 30px 400px;
+            width: 50%;
+        }
+    }
+}
+@media only screen and(max-width: 860px) {
+    .layout {
+        margin-left: -121px;
+        .main {
+            margin: 0px 0px 30px 100px;
+        }
+    }
+}
+@media only screen and (min-width:300px)and(max-width: 600px) {
+    .layout {
+        .main {
+            width: auto;
+        }
+    }
+}

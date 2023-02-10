@@ -1,0 +1,27 @@
+<section>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <mat-form-field appearance="outline">
+          <input matInput formControlName="email" placeholder="Enter email id" required>
+          <mat-error *ngIf="loginForm?.controls?.email?.errors?.required">Please enter the Email</mat-error>
+          <mat-error *ngIf="loginForm?.controls?.email?.errors?.pattern">*Enter valid Email</mat-error>
+      </mat-form-field>
+      <label>Password</label>
+      <mat-form-field appearance="outline">
+          <input matInput  formControlName="password" placeholder="Enter password" [type]="hide ? 'password':'text'"  required>
+          <i class="material-icons" matSuffix (click)="hide = !hide">
+            {{hide?'visibility':'visibility_off'}}
+          </i>
+          <mat-error *ngIf="loginForm?.controls?.password?.errors?.required">*Password is Required</mat-error>
+          <mat-error *ngIf="loginForm?.controls?.password?.errors?.minlength">*Minimum length should be 6 </mat-error>
+      </mat-form-field>
+      <div class="nav">
+          <a (click)="openDialog()">Forgot Password?</a>
+          <button type="submit" mat-raised-button color="primary" id="submit_button">
+            <ng-container *ngIf="!spinner">Get Started</ng-container>
+            <mat-spinner *ngIf="spinner" [diameter]="40"></mat-spinner>
+          </button>
+      </div>
+  </form>
+</section>
+

@@ -1,0 +1,109 @@
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
+}
+
+section h1 {
+  color: #1d0268;
+  font-weight: 500;
+}
+
+section form {
+  width: 90%;
+}
+
+section form .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section form .content label {
+  color: black;
+  font-weight: 500;
+}
+
+section form .content .logo {
+  background-color: #f4f4f4;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+section form .content .logo img {
+  width: 80px;
+  height: 80px;
+  margin-left: -15px;
+}
+
+section form .content .logo button .mat-icon {
+  border-radius: 50%;
+  background-color: white;
+}
+
+section form .content mat-form-field {
+  position: relative;
+}
+
+section form .content .loc {
+  position: absolute;
+  right: 0;
+  bottom: 16px;
+}
+
+section form .content .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section form .content .nav button {
+  width: 50%;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  padding: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+section form .content .nav button:disabled {
+  font-weight: 200;
+  font-style: normal;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+section form .content .nav button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00b790), to(#1a1d6c));
+  background-image: linear-gradient(to right, #00b790, #1a1d6c);
+}
+
+::ng-deep.mat-form-field-outline {
+  background-color: white;
+  border-radius: 8px;
+}
+
+:host .mat-error {
+  font-size: 15px;
+  margin-left: -8px;
+  margin-top: -3px;
+}
+
+:host .mat-button .mat-button-wrapper > * {
+  font-size: 40px;
+}
+/*# sourceMappingURL=add-lab-detail.component.css.map */

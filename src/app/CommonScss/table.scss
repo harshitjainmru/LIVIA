@@ -1,0 +1,51 @@
+#spin{
+    display: flex;
+    justify-content: center;
+  }
+  table {
+  
+    width: 92%;
+    padding: 20px;
+    background-color: #edf0f2;
+    border-radius: 5px;
+  
+    .mat-header-row{
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+      background-color: white;
+      border-radius: 5px;
+      border-bottom: none;
+
+    }
+    th.mat-header-cell{
+      color: darkblue;
+      font-weight: 900;
+      font-size: 16px;
+      border: none;
+      text-align: center;
+    }
+    // th:first-child {
+    //   border-radius: 10px 0 0 10px;
+    // }
+    // th:last-child {
+    //   border-radius: 0 10px 10px 0;
+    // }
+    // td:first-child {
+    //   border-radius: 10px 0 0 10px;
+    // }
+    // td:last-child {
+    //   border-radius: 0 10px 10px 0;
+    // }
+    // .mat-row:nth-child(even) {
+    //   background-color: white;
+    // }
+    .mat-cell{
+      border: none;
+      text-align: center;
+    }
+    #noData{
+      text-align: center; 
+      font-size: 20px; 
+      padding: 5%;
+      font-weight: 550;
+    }
+  }

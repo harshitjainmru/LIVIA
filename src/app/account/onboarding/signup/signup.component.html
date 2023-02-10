@@ -1,0 +1,88 @@
+<section>
+    <div class="data">
+        <form [formGroup]="signForm" (ngSubmit)="onSubmit()">
+            <label>Name of Admin</label>
+            <div class="name">
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <mat-select formControlName="name_prefix">
+                        <mat-option value="Mr">Mr.</mat-option>
+                        <mat-option value="Mrs">Mrs.</mat-option>
+                        <mat-option value="Other">Other</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="signForm?.controls?.name_prefix?.errors?.required">*Required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="first_name" placeholder="First Name" />
+                    <mat-error *ngIf="signForm?.controls?.first_name?.errors?.required">*First name is required
+                    </mat-error>
+                    <mat-error
+                        *ngIf="signForm?.controls?.first_name?.errors?.minlength && !signForm?.controls?.first_name?.errors?.pattern">
+                        MinLength should be 3</mat-error>
+                    <mat-error *ngIf="signForm?.controls?.first_name?.errors?.pattern">*only alphabets are allow
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="last_name" placeholder="Last Name">
+                    <mat-error *ngIf="signForm?.controls?.last_name?.errors?.required">*Last name is required
+                    </mat-error>
+                    <mat-error *ngIf="signForm?.controls?.last_name?.errors?.minlength">MinLength should be 3
+                    </mat-error>
+
+                    <mat-error *ngIf="signForm?.controls?.last_name?.errors?.pattern">*Space not allowed</mat-error>
+                </mat-form-field>
+            </div>
+            <label for="">Contact Number</label>
+            <div class="contact">
+                <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <mat-select formControlName="country_code">
+                        <mat-option value="ind">IND</mat-option>
+                        <mat-option value="ke">Kenya</mat-option>
+                        <mat-option value="uk">UK</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="signForm?.controls?.country_code?.errors?.required">*Required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Phone Number</mat-label>
+                    <input matInput formControlName="phone_number" placeholder="Phone Number">
+                    <mat-error *ngIf="signForm?.controls?.phone_number?.errors?.required">*Phone number is required
+                    </mat-error>
+                    <mat-error *ngIf="signForm?.controls?.phone_number?.errors?.pattern ">
+                        First digit 7 and second 9 and length should be 9
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="email">
+                <label>Email</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="email" placeholder="Enter email id" required>
+                    <mat-error *ngIf="signForm?.controls?.email?.errors?.required">*Email is required</mat-error>
+                    <mat-error *ngIf="signForm?.controls?.email?.errors?.pattern">*Enter valid email</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="pass">
+                <label>Create Password</label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="password" placeholder="Create Password"
+                        [type]="hide ? 'password':'text'" required>
+                    <i class="material-icons" matSuffix (click)="hide = !hide">
+                        {{hide ? 'visibility' : 'visibility_off'}}
+                    </i>
+                    <mat-error *ngIf="signForm?.controls?.password?.errors?.required">*Password is required</mat-error>
+                    <mat-error *ngIf="signForm?.controls?.password?.errors?.minlength">*Minimum Length should be 6
+                    </mat-error>
+                    <mat-error *ngIf="signForm?.controls?.password?.errors?.pattern">*Space not allowed</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="nav">
+                <button type="submit" color="primary" [disabled]="disable_btn">
+                    <ng-container *ngIf="!spinner"> Signup</ng-container>
+                    <mat-spinner [diameter]="30" *ngIf="spinner"></mat-spinner>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,256 @@
+<div class="container">
+    <section>
+        <div class="content">
+            <div class="container1">
+                <div class="heading">
+                    <p>All dental, inpatient or outpatient procedures that you carry out on the patient require
+                        preauthorization.<br> </p>
+                    <a>Click here to create a preauth and get approval.</a>
+
+
+                </div>
+                <div class="alertMessage">
+                    <h2>Important Message</h2>
+                    <p>Dear Doctor, we have transitioned to E-prescriptions. If issuing a prescription is part of your
+                        treatment plan, kindly create the E-prescription when
+                        creating the E-claim within this screen. This will ensure that we are able to map the
+                        E-prescription to your claim and also make the patient journey
+                        completely paperless. We thank you for your continued support and the excellent services you are
+                        offering to our clients.</p>
+                </div>
+                <h1>Create Claim</h1>
+                <span class="steps" mat-raised> Step 1</span>
+                <div class="step1">
+                    <div class="firstrow1">
+
+                        <div class="field1">
+                            <label>Claim start Date</label>
+                            <mat-form-field appearance="outline" class="field4">
+                                <input matInput placeholder="Claim start Date" class="date1"
+                                    [matDatepicker]="datepicker1" [disabled]="true">
+                                <mat-datepicker-toggle matSuffix [for]="datepicker1"></mat-datepicker-toggle>
+                                <mat-datepicker #datepicker1 disabled="false">
+                                </mat-datepicker>
+
+                            </mat-form-field>
+
+                        </div>
+                        <div class="field1">
+                            <label>Patient Insurance <span class="alertIcon">*</span></label>
+                            <mat-form-field appearance="outline">
+                                <mat-select matNativeControl (selectionChange)="dropInsuFilter($event.value)">
+                                    <mat-option value="">None</mat-option>
+                                    <mat-option *ngFor="let company of insurance_company" [value]="company.id">
+                                        {{company.name}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>&nbsp;
+                        </div>
+                        <div class="field1">
+                            <label>Patient Benefits</label>
+                        </div>
+                    </div>
+                    <div class="hiddenContent" *ngIf="hidden_data">
+                        <div class="radioSelection">
+                            <mat-radio-button>
+                                Search with Member no.
+                            </mat-radio-button>
+                            <img src="../../../assets/banner.png" alt=""  id="radioImg1"><br>
+                            <mat-radio-button>
+                                Search with Smart card
+                            </mat-radio-button>
+                            <img src="../../../assets/banner.png" alt=""  id="radioImg2">
+                        </div>
+                        <div class="field1">
+                            <label> Member no <span class="alertIcon">*</span></label>
+                            <mat-form-field appearance="outline">
+                                <input matInput placeholder="Phone Number">
+
+                            </mat-form-field>
+                        </div>
+                        <button class="searchBtn">Search</button>
+                        <div class="field1">
+                            <label> Employer name <span class="alertIcon">*</span></label>
+                            <mat-form-field appearance="outline">
+                                <input matInput >
+                            </mat-form-field>
+                        </div>
+
+                    </div>
+                    <div class="firstrow2">
+                        <div class="field1">
+                            <label> Phone no <span class="alertIcon">*</span></label>
+                            <mat-form-field appearance="outline">
+                                <input matInput placeholder="7XXXXXXXX" type="number" class="example-right-align">
+                                <span matPrefix class="code">+254&nbsp;</span>
+                            </mat-form-field>
+                        </div>
+                        <div class="field1">
+                            <label>Family member's phone no <span class="alertIcon">*</span></label>
+                            <mat-form-field appearance="outline">
+                                <input matInput   placeholder="7XXXXXXXX" type="number" class="example-right-align">
+                                <span matPrefix class="code">+254&nbsp;</span>
+
+                            </mat-form-field>
+                            <mat-checkbox id="checkbox1"> Use Principal member's phone no.</mat-checkbox>
+                        </div>
+                        <div class="field1">
+                            <label>Patient Name <span class="alertIcon">*</span> </label>
+                            <mat-form-field appearance="outline">
+                                <input matInput>
+
+                            </mat-form-field>
+                        </div>
+                        <div class="field1">
+                            <label>Gender <span class="alertIcon">*</span></label>
+                            <mat-form-field appearance="outline">
+                                <input matInput>
+
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="field1">
+                        <label>Birthday <span class="alertIcon">*</span></label>
+                        <mat-form-field appearance="outline">
+                            <input matInput>
+
+                        </mat-form-field>
+                    </div>
+
+
+                </div>
+                <div class="steps"> Step 2</div>
+                <div class="step2">
+                    <div class="field1">
+                        <label>Type of Claim <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline">
+                            <mat-select matNativeControl>
+                                <mat-option value="">None</mat-option>
+                                <mat-option value="OutPatient">OutPatient</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="field1">
+                        <label>Consultation type <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline">
+                            <mat-select matNativeControl>
+                                <mat-option value="">None</mat-option>
+                                <mat-option value="Consultation">Consultation</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <mat-checkbox id="checkbox2">No Charge</mat-checkbox>
+                    </div>
+                    <div class="field1">
+                        <label>Consultaion fee <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline">
+                            <input matInput>
+
+                        </mat-form-field>
+                    </div>
+                    <div class="field1">
+                        <label>Clinic <span class="alertIcon">*</span></label>
+                        <mat-form-field appearance="outline">
+                            <mat-select matNativeControl>
+                                <mat-option value="">None</mat-option>
+                                <mat-option [value]="">Alexa Clinic</mat-option>
+                                <mat-option [value]="">Mvm IOS Clinic</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="steps"> Step 3</div>
+                <div class="step3">
+                    <div class="field1">
+                        <label>Final Diagnosis (ICD10) <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline" class="field1">
+                            <a class="searchIcon">
+                                <mat-icon>search</mat-icon>
+                            </a>
+                            <input matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="field1">
+                        <label>Condition was first diagnosed <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline">
+                            <input matInput>
+
+                        </mat-form-field>
+                    </div>
+                    <div class="field1">
+                        <label>Details of Previous Treatment and Given Recommendations <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline" class="textareaInput">
+                            <textarea placeholder="Enter here" matInput formControlName="lab_bio"></textarea>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+                <div class="steps"> Step 4</div>
+                <div class="step4">
+                    <div class="field1">
+                        <label>Sickness/Accident <span class="alertIcon">*</span> </label>
+                        <mat-form-field appearance="outline">
+                            <mat-select matNativeControl>
+                                <mat-option value="">None</mat-option>
+                                <mat-option [value]="">Sickness</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="lastSteprow2">
+                        <div class="field1">
+                            <label>Cause of Illness(es) <span class="alertIcon">*</span> </label>
+                            <mat-form-field appearance="outline">
+                                <input matInput>
+
+                            </mat-form-field>
+                            <mat-checkbox id="checkBox3">Patient requires referral to a specialist</mat-checkbox>
+                        </div>
+                        <div class="field1">
+                            <label>Sickness Condition <span class="alertIcon">*</span> </label>
+                            <mat-form-field appearance="outline">
+                                <mat-select matNativeControl>
+                                    <mat-option value="">None</mat-option>
+                                    <mat-option value="Sickness">Sickness</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="field1">
+                            <label>Nature of Treatment and Given <span class="breakLabel">Recommendations</span> <span class="alertIcon">*</span> </label>
+                            <mat-form-field appearance="outline" class="textareaInput">
+                                <mat-select matNativeControl>
+                                    <mat-option value="">None</mat-option>
+
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="last">
+
+                <mat-checkbox class="checkBox4"> <span class="confirmation">I here by confirm that the information provided</span> <span class="confirmation">above is correct and
+                    true to the best of
+                    my</span><span> knowledge.</span> <span class="alertIcon">*</span></mat-checkbox><br>
+
+                    <button mat-raised-button class="cancelBtn">Cancel</button>
+            </div>
+
+            </div>
+            <div class="container2">
+                <h4>Member Information</h4>
+                <div class="img1">
+                    <h3>Membership card photo</h3>
+                    <img src="../../../assets/Jubilee_Insurance_Logo.jpg" alt="">
+                </div>
+                <div class="img1">
+                    <h3>Member photo with Membership card</h3>
+                </div>
+                <div class="img1">
+                    <h3>Member's ID photo front</h3>
+                </div>
+                <div class="img1">
+                    <h3>Member's ID photo back</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>

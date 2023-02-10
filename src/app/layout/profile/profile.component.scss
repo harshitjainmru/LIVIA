@@ -1,0 +1,171 @@
+
+@mixin box-style {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+}
+@mixin btn {
+  background-color: white;
+  color: #5ae0ba;
+  font-size: 16px;
+  height: 50px;
+  width: 200px;
+  border: 5px solid none;
+  text-align: center;    
+}
+@mixin img {
+  height: 120px;
+  width: 150px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.container {
+  background-color: #edf0f2;
+span{
+  margin-left: 5%;
+  font-size: 15px;
+  display:inline-flex;
+  a{
+    cursor: pointer;
+  }
+  p{
+  color: #3932b9;
+  font-weight: 800;
+  height: 5px;
+
+ }
+}
+.main{
+  background-color:  #edf0f2;
+  margin:1% 0% 0% 3.4%;
+.heading{
+  h1{
+    color: #20249b;
+    font-weight: 500;
+    font-size: 35px;
+    margin: 2% 2.1%;
+  }
+}
+section {
+  display: grid;
+  grid-template-columns: 25% auto;
+  column-gap: 15px;
+  margin: 0px 60px 0px  35px;  
+
+  h2,
+  h4 {
+      color: #2e1b77;
+  }
+  .left {
+      display: grid;
+      justify-content: center;
+      width: 70%;
+      height: fit-content;
+      padding: 30px 0;
+      border-radius: 10px;
+      box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+      .profile {
+          display: grid;
+          justify-content: center;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgb(201, 196, 196);
+          img {
+              height: 80px;
+              width: 80px;
+              border-radius: 10px;
+              border: 2px solid black;
+              justify-self: center;
+             
+          }
+      }
+      .info {
+        margin-left: 20px;
+        .details{
+         display: flex;
+         h4{
+           margin:0px 30px 0px 0px;
+           padding-bottom: 20px
+         }
+        }
+
+      }
+      button {
+        @include btn();
+        left: 30px;
+        box-shadow: -5px -5px 10px whitesmoke, -5px -5px 10px white,-5px -5px 10px white;
+
+      }
+  }
+  .right {
+    // margin-top: -10px;
+      .image {
+          @include box-style();
+          .cursor {
+              // padding: 20px;
+              border-radius: 10px;
+              // margin-bottom: 20px;
+              padding: 2% 6%;
+              border: 1px solid rgb(219, 214, 214)
+          }
+      }
+      .bio {
+          @include box-style();
+      }
+      .doc {
+          @include box-style();
+          .upload{
+            display: flex;
+            justify-content: space-between;
+            img {
+                @include img();
+            }
+            p{
+              text-align: center
+            }
+        }
+
+          }
+      .company {
+          @include box-style();
+          .insurance_logo{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            img {
+                @include img();
+            }
+            p{
+              text-align: center
+            }
+          }
+      }
+      .payment {
+        margin-bottom: 100px;
+          @include box-style();
+          .info {
+              display: flex;
+              justify-content: space-between;
+          }
+          button {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+              @include btn();
+          }
+          .detail {
+            .img{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            p{
+              text-align: center
+            }
+              @include box-style();
+              margin-top: 1%;
+
+          }
+      }
+    }
+  }
+}
+}

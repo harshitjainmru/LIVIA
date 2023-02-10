@@ -1,0 +1,113 @@
+section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section form h1 {
+  color: #1d0268;
+  font-weight: 500;
+}
+
+section form .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section form .content mat-form-field {
+  position: relative;
+}
+
+section form .content .labelBold {
+  font-weight: 500;
+}
+
+section form .content .labelBold i {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+section form .content .loc {
+  position: absolute;
+  right: 0;
+  bottom: 9px;
+  padding: 6px;
+  border-radius: 5px;
+  background-color: #f3f2ff;
+  color: #1d0268;
+}
+
+section form .content .verify {
+  position: absolute;
+  right: 45px;
+  top: 5px;
+  font-size: 25px;
+  color: #00b790;
+}
+
+section form .content .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section form .content .btn button {
+  width: 50%;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#1a1d6c), to(#00b790));
+  background-image: linear-gradient(to right, #1a1d6c, #00b790);
+  padding: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+section form .content .btn button:disabled {
+  font-style: normal;
+  font-weight: 200;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+section form .content .btn button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00b790), to(#1a1d6c));
+  background-image: linear-gradient(to right, #00b790, #1a1d6c);
+}
+
+:host .mat-form-field-empty.mat-form-field-label {
+  font-weight: 700;
+}
+
+:host .mat-error {
+  font-size: 15px;
+  margin-left: -8px;
+  margin-top: -3px;
+}
+
+::ng-deep .mat-form-field-label {
+  font-weight: 700;
+}
+
+::ng-deep .mat-form-field-outline {
+  background-color: white;
+  border-radius: 8px;
+}
+
+::ng-deep snack-bar-container.snackBar {
+  background: #c5f6c5;
+  color: black;
+  font-size: 20px;
+}
+/*# sourceMappingURL=add-doc.component.css.map */

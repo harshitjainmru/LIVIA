@@ -1,0 +1,80 @@
+@import "/src/app/CommonScss/pagination.scss";
+@import "/src/app/CommonScss/table.scss";
+@import "/src/app/CommonScss/subHeading.scss";
+
+.container {
+  background-color: #edf0f2;
+}
+
+section {
+  margin: 1.5% 0% 0% 5.6%;
+
+  .heading {
+    h1 {
+      color: #1a1d6c;
+      font-weight: 500;
+      font-size: 35px;
+      margin: 30px 0px 25px 0px;
+    }
+  }
+  .content {
+    .field1 {
+      width: 300px;
+      position: relative;
+
+      .searchIcon {
+        position: absolute;
+        left: 0;
+        font-size: 25px;
+        margin-top: -3%;
+      }
+    }
+  }
+}
+th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.mat-row:nth-child(even) {
+  background-color: white;
+}
+input.mat-input-element {
+  margin-left: 8.3%;
+  color: black;
+  // &::placeholder{
+  //   color: black;
+  // }
+}
+:host {
+  [hidden] {
+    display: none !important;
+  }
+}
+
+::ng-deep {
+  .mat-form-field-label {
+    color: black;
+    margin-left: 10%;
+  }
+  .mat-progress-spinner circle,
+  .mat-spinner circle {
+    stroke: blue;
+  }
+
+  .mat-elevation-z8 {
+    box-shadow: 5px 5px 5px -3px gray, 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset, rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
+  background-color: white;
+}

@@ -1,0 +1,196 @@
+<div class="container">
+<section>
+    <div class="backgroundManagement">
+        <h3 class="heading">Website Color/Background Management</h3>
+        <div class="backgroundColor">
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="color"
+                      autocomplete="off"
+                      [(colorPicker)]="color"
+                      />
+                  </mat-form-field>
+                <label for="Body Background Colour"  >Body Background Colour</label>
+            </div>
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="color"
+                      autocomplete="off"
+                      [(colorPicker)]="color"/>
+                  </mat-form-field>
+                <label>Footer Background Colour</label>
+            </div>
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="color"
+                      autocomplete="off"
+                      [(colorPicker)]="color"/>
+                  </mat-form-field>
+                <label>Header Background Colour</label>
+            </div>
+        </div>
+        <div class="backgroundColor">
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="color"
+                      autocomplete="off"
+                      [(colorPicker)]="color" />
+                  </mat-form-field>
+                <label>Default Font Colour</label>
+            </div>
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="color"
+                      autocomplete="off"
+                      [(colorPicker)]="color" class="default"/>
+                  </mat-form-field>
+                <label class="subHeading">Default Link Colour</label>
+            </div>
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="color"
+                      autocomplete="off"
+                      [(colorPicker)]="color" class="btncolor"/>
+                  </mat-form-field>
+                <label class="btnlabel">Button Background Colour</label>
+            </div>
+        </div>
+        <div class="backgroundColor">
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="text_color"
+                      autocomplete="off"
+                      [(colorPicker)]="text_color"/>
+                  </mat-form-field>
+                <label >Button Text Colour</label>
+            </div>
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="text_color"
+                      autocomplete="off"
+                      [(colorPicker)]="text_color" class="footerColor"/>
+                  </mat-form-field>
+                <label >Footer Text Colour</label>
+            </div>
+            <div class="content">
+                <mat-form-field class="colorInput">
+                    <input fornControlName="color"
+                      matInput
+                      [style.background]="text_color"
+                      autocomplete="off"
+                      [(colorPicker)]="text_color" class="headerColor"/>
+                  </mat-form-field>
+                <label>Header Text Colour</label>
+            </div>
+        </div>
+        
+    </div>
+    <div class="fontManagement">
+        <h3 class="heading">Website Font Management</h3>
+        <div class="inputField">
+        <div class="field1">
+            <label>Default Font Family</label>
+            <mat-form-field appearance="outline" class="formfield">
+              <mat-select placeholder="Font">
+                <mat-option value="">None</mat-option>
+
+            </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="field1">
+            <label>Default Body Font Size</label>
+            <mat-form-field appearance="outline" class="formfield">
+              <mat-select placeholder="Font">
+                <mat-option value="">None</mat-option>
+
+            </mat-select>
+            </mat-form-field>
+        </div>
+        
+    </div>
+    <div class="field1">
+  
+        <label>Footer Text</label>
+        <mat-form-field appearance="outline" class="footerText">
+            <input matInput  required>
+        </mat-form-field>
+    </div>
+    </div>
+    <div class="bannerManagement">
+        <h3 class="heading">Banner Management</h3>
+        <div class="imageAndTextArea">
+            <div class="preview" >
+                <label class="background">Banner Background Image</label>
+                <div class="edit">
+                    <!-- <a (click)="deleteImg('delProfile')">
+                        <mat-icon class="loc">cancel</mat-icon>
+                    </a> -->
+                    <!-- <img [src]=imgUrl+editFrom?.controls?.avatar?.value alt="Logo Image" *ngIf="!spinner"> -->
+                </div>
+                <div class="photo" >
+                    <button type="button" class="add" mat-button (click)="fileInput1.click()"><mat-icon class="icon">add</mat-icon>
+                        <!-- <input #fileInput1 id="file" multiple=""  type="file" style="display:none;"
+                            (change)="onFileChange($event,'profile')" /> -->
+                        <input #fileInput1 id="file" multiple=""  type="file" style="display:none;"
+                            />
+                    </button>
+                </div>
+            </div>
+            <div class="textarea">
+                <label class="background">Banner Background Heading</label>
+                <mat-form-field appearance="outline" class="textareaInput">
+                <textarea placeholder="Enter here"  
+                 matInput ></textarea>
+            </mat-form-field>
+            </div>
+            <div class="textarea">
+                <label class="background">Banner Background Description</label>
+                <mat-form-field appearance="outline" class="textareaInput">
+                <textarea placeholder="Enter here"  
+                 matInput formControlName="lab_bio"></textarea>
+            </mat-form-field>
+            </div>
+        </div>
+        <div class="inputFields">
+        <div class="field1">
+            <label>Banner Heading Font Size</label>
+            <mat-form-field appearance="outline" class="formfield" >
+              <mat-select placeholder="Font">
+                <mat-option value="">None</mat-option>
+
+            </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="field1">
+            <label>Banner Sub Heading Font Size</label>
+            <mat-form-field appearance="outline" class="formfield">
+              <mat-select placeholder="Font">
+                <mat-option value="">None</mat-option>
+
+            </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+    </div>
+    <div class="btn">
+        <button>Save</button>
+    </div>
+
+</section>
+</div>

@@ -1,0 +1,111 @@
+
+@import '/src/app/CommonScss/snackBar.scss';
+.main {
+  h2 {
+    color: #334fbb;
+  }
+  .photo {
+    background-color: lightgray;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    .files_display{
+      display: none;
+    }
+    button{
+    &:disabled{
+      cursor: not-allowed;
+      pointer-events: all !important;
+    }
+  }
+  }
+  .bottom {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    button {
+      width: 50%;
+      height: 50px;
+      margin-top: 10px;
+      background-image: linear-gradient(to right, #1a1d6c, #00b790);
+      padding: 5px;
+      font-size: 18px;
+      color: white;
+      border-radius: 5px;
+      &:disabled{
+        
+        font-weight: 200;
+        cursor: not-allowed;
+        pointer-events: all !important;
+      }
+      &:hover {
+        background-image: linear-gradient(to right, #00b790, #1a1d6c);
+      }
+    }
+  }
+}
+.preview {
+  position: relative;
+  display: flex;
+  a {
+    position: absolute;
+    z-index: 1;
+    margin-left: 65px;
+    // right: 0;
+    mat-icon {
+      color: black;
+    }
+  }
+  a:hover {
+    cursor: pointer;
+  }
+  img {
+    height: 80px;
+    width: 90px;
+
+    border-radius: 10px;
+  }
+}
+.arrImg {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 10px;
+}
+#spin{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: 25px 30px;
+}
+i {
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: -5px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+}
+.images {
+  display: flex;
+  img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin-left: 20px;
+  }
+}
+
+:host {
+  .icon {
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+    border-radius: 50%;
+    background-color: white;
+  }
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: dimgray;
+  }

@@ -1,0 +1,103 @@
+<section>
+    <div class="aboutUs">
+        <p class="heading">About Us</p>
+        
+        <!-- <editor apiKey="Get your free API key at tiny.cloud and paste it here"
+    ></editor> -->
+    <editor
+   [init]="{
+     height: 500,
+     plugins: [
+        'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+       'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+       'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+     ],
+     toolbar:
+      'undo redo | casechange blocks | bold italic backcolor | \
+      alignleft aligncenter alignright alignjustify | \
+      bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+   }"
+ ></editor>
+        <button class="submitBtn">Save</button>
+    </div>
+    <div class="statement">
+        <p class="heading">Statement</p>
+        <div class="textarea">
+            <mat-form-field appearance="outline" class="textareaInput">
+            <textarea  
+             matInput formControlName="lab_bio"></textarea>
+        </mat-form-field>
+        </div>
+        <button class="submitBtn">Save</button>
+    </div>
+    <div class="faq">
+        <p class="heading">FAQ's</p>
+        <div class="faqrow1">
+            <div class="question">
+                <span class="material-icons">arrow_right</span>
+                <p>What all should I carry for my first?</p>
+            </div>
+            <div class="btngrp">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+        <div class="faqrow1">
+            <div class="question">
+                <span class="material-icons">arrow_right</span>
+                <p>Is endoscopy a painful procedure?</p>
+            </div>
+            <div class="btngrp">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+        <div class="faqrow1">
+            <div class="question">
+                <span class="material-icons">arrow_right</span>
+                <p>What are the procedures offered for treating colon cancer?</p>
+            </div>
+            <div class="btngrp">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div><br>
+        <button class="submitBtn">Add FAQ</button>
+    </div>
+    <div class="contact">
+        <p class="heading">Contact Us</p>
+        <p>Recipient email address for contact form submission</p>
+        <div class="emailInput">
+            <mat-form-field appearance="outline">
+                <input matInput placeholder="Enter email">
+            </mat-form-field>
+            <button class="add">Add</button>
+        </div>
+        <div class="table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+
+                <ng-container matColumnDef="contact_email">
+                    <th mat-header-cell *matHeaderCellDef> Contact Email</th>
+                    <td mat-cell *matCellDef="let element">vinayakhoaspital@yopmail.com </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action</th>
+                    <td mat-cell *matCellDef="let element">
+                     <button type="button" class="delete" >Delete</button>
+                    </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+        </div>
+
+        <button class="submitBtn">Save</button>
+    </div>
+</section>

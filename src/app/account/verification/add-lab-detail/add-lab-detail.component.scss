@@ -1,0 +1,124 @@
+@import '/src/app/CommonScss/snackBar.scss';
+section {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  h1 {
+    color: #1d0268;
+    font-weight: 500;
+  }
+  form {
+    width: 90%;
+    .content {
+      display: flex;
+      flex-direction: column;
+      label {
+        color: black;
+        font-weight: 500;
+      }
+      .logo {
+        background-color:#f4f4f4;
+        width: 80px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        .files_display{
+          display: none;
+        } 
+        img{
+          width: 80px;
+          height: 80px;
+          margin-left: -15px;
+        }
+        button {
+          .mat-icon {
+            border-radius: 50%;
+            background-color: white;
+          }
+        }
+      }
+      .preview {
+        position: relative;
+        display: flex;
+        a {
+          position: absolute;
+          z-index: 1;
+          margin-top: -50px;
+          margin-left: 65px;
+          // right: 0;
+          mat-icon {
+            color: black;
+          }
+        }
+        a:hover {
+          cursor: pointer;
+        }
+        img {
+          height: 83px;
+          width: 87px;
+          margin-left: -0.1px;
+          border-radius: 10px;
+        }
+        .fa-times-circle{
+            position: absolute;
+            z-index: 1;
+            font-size: 25px;
+            margin-left: 5px;
+            margin-top: 45px;
+            color: black;
+            background-color: white;
+            border-radius: 50%;
+          
+        }
+      }
+ 
+      mat-form-field {
+        position: relative;
+      }
+      .loc {
+        position: absolute;
+        right: 0;
+        bottom: 16px;
+      }
+      .nav {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          width: 50%;
+          margin-top: 10px;
+          background-image: linear-gradient(to right, #1a1d6c, #00b790);
+          padding: 5px;
+          color: white;
+          font-size: 18px;
+          &:disabled {
+            // background-image: linear-gradient(to right, wheat,aliceblue);
+            // color: rgb(92, 44, 44);
+            font-weight: 200;
+
+            font-style: normal;
+            cursor: not-allowed;
+            pointer-events: all !important;
+          }
+          &:hover {
+            background-image: linear-gradient(to right, #00b790, #1a1d6c);
+          }
+        }
+      }
+    }
+  }
+}
+::ng-deep.mat-form-field-outline {
+  background-color: white;
+  border-radius: 8px;
+}
+:host {
+  .mat-error {
+    font-size: 15px;
+    margin-left: -8px;
+    margin-top: -3px;
+  }
+
+  .mat-button .mat-button-wrapper > * {
+    font-size: 40px;
+  }
+}

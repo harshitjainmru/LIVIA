@@ -1,0 +1,100 @@
+@import "/src/app/CommonScss/pagination.scss";
+@import "/src/app/CommonScss/table.scss";
+@import "/src/app/CommonScss/subHeading.scss";
+@import "/src/app/CommonScss/overrideStyling.scss";
+
+$width: 180px;
+
+
+section {
+  margin: 1.5% 0% 0% 5.6%;
+  .heading {
+    h1 {
+      color: #1a1d6c;
+      font-weight: 500;
+      font-size: 35px;
+      margin: 30px 0px 25px 0px;
+
+
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .field1 {
+      width: 300px;
+      position: relative;
+
+      .searchIcon {
+        position: absolute;
+        left: 0;
+        font-size: 25px;
+        margin-top: -3%;
+      }
+    }
+    .input {
+      margin-right: 8%;
+      .field2 {
+        width: $width;
+      }
+      .field3 {
+        width: $width;
+      }
+      .cancel {
+        position: absolute;
+        right: 0px;
+        bottom: 12px;
+        color: dimgray;
+      }
+      .field4 {
+        width: $width;
+      }
+      .field5 {
+        width: $width;
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: right;
+    margin-right: 8%;
+    button {
+      background-image: linear-gradient(to right, #1a1d6c, #00b790);
+      color: white;
+      border: none;
+      padding: 1%;
+      width: 170px;
+      border-radius: 5px;
+      box-shadow: rgba(236, 239, 241, 0.897) 0px 8px 24px;
+      cursor: pointer;
+      &:disabled{
+      background-image: linear-gradient(to right, lightslategray, lightslategray);
+      cursor: not-allowed;
+
+      }
+    }
+  }
+
+  table {
+    margin-top: 0.5%;
+    .testname {
+      width: 500px;
+    }  
+    .dollar_img{
+      width: 25px;
+      height: 27px;
+    }
+    .mat-checkbox-disabled{
+      margin-right: 22px;
+    }
+  }  
+}
+
+input.mat-input-element {
+  margin-left: 8.3%;
+  color: black;
+  // &::placeholder{
+  //   color: black;
+  // }
+}

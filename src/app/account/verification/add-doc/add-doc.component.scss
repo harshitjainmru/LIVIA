@@ -1,0 +1,113 @@
+@import "/src/app/CommonScss/snackBar.scss";
+section {
+  form {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      color: #1d0268;
+      font-weight: 500;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      .files_display {
+        display: none;
+      }
+      mat-form-field {
+        position: relative;
+      }
+
+      .labelBold {
+        font-weight: 500;
+        i {
+          color: red;
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+
+      .loc {
+        position: absolute;
+        right: 0;
+        bottom: 9px;
+        padding: 6px;
+        border-radius: 5px;
+        margin-top: -15px;
+        background-color: #f3f2ff;
+        color: #1d0268;
+        .spin {
+          margin-top: -30px;
+          margin-left: -5px;
+        }
+      }
+      .icon {
+        float: right;
+        color: #00b790;
+        margin: -15px 50px 0px 0px;
+        cursor: pointer;
+        .action_icon {
+          font-size: 30px;
+        }
+      }
+      .btn {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          width: 50%;
+          margin-top: 10px;
+          background-image: linear-gradient(to right, #1a1d6c, #00b790);
+          padding: 5px;
+          height: 50px;
+          color: white;
+          font-size: 18px;
+          &:disabled {
+            // background-image: linear-gradient(to right, wheat,aliceblue);
+            // color: rgb(100, 59, 59);
+            font-style: normal;
+            font-weight: 200;
+
+            cursor: not-allowed;
+            pointer-events: all !important;
+          }
+        }
+        button:hover {
+          background-image: linear-gradient(to right, #00b790, #1a1d6c);
+        }
+      }
+      .btnSpinner {
+        position: relative;
+        margin-left: 40%;
+        margin-right: 40%;
+        margin-top: -18%;
+      }
+    }
+  }
+}
+::ng-deep .mat-progress-spinner circle,
+.mat-spinner circle {
+  stroke: #b68200;
+}
+:host {
+  .mat-form-field-empty.mat-form-field-label {
+    font-weight: 700;
+  }
+  .mat-error {
+    font-size: 15px;
+    margin-left: -8px;
+    margin-top: -3px;
+  }
+}
+::ng-deep {
+  .mat-form-field-label {
+    font-weight: 700;
+  }
+  .mat-form-field-outline {
+    background-color: white;
+    border-radius: 8px;
+  }
+}
+::ng-deep snack-bar-container.snackBar {
+  background: rgb(197, 246, 197);
+  color: black;
+  font-size: 20px;
+}

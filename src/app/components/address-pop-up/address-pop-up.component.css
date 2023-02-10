@@ -1,0 +1,28 @@
+section .location {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 10px;
+}
+
+.btn {
+  float: right;
+}
+
+.btn button {
+  background-color: #64ce4c;
+  border: 0px;
+  color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+::ng-deep .mat-form-field-infix {
+  width: 500px;
+}
+
+::ng-deep .mat-form-field-infix-outline {
+  color: black;
+}
+/*# sourceMappingURL=address-pop-up.component.css.map */

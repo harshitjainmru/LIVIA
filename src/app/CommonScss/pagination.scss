@@ -1,0 +1,44 @@
+.paginator {
+    ::ng-deep {
+      .mat-paginator-container {
+        background-color: #edf0f2;
+      }
+      .mat-paginator-icon {
+        color: rgb(90, 87, 87);
+        width: 20px;
+      }
+  
+      .mat-icon-button {
+        background-color: #edf0f2;
+        box-shadow: 5px 5px 5px -3px rgb(250, 239, 239), 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+  
+        margin: 10px;
+        margin-right: 0;
+        border-radius: 5px;
+      }
+  
+      .mat-paginator-range-label {
+        background-color: #e0f8f0;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px -3px rgb(255, 251, 251), 0px 8px 10px 1px white, 0px 3px 14px 2px white;
+      }
+  
+      .mat-paginator-outer-container {
+        margin-top: 20px;
+      }
+  
+      .mat-select-panel[aria-label="none"] {
+        .mat-option-text {
+          font-size: 1.4rem;
+        }
+      }
+      .mat-paginator-range-actions {
+        margin-right: 7.7%;
+      }
+    }
+    [hidden]{
+      display: none !important;
+    }
+  }
+  

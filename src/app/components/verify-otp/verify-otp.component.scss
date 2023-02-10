@@ -1,0 +1,70 @@
+section{
+    background-color: #ebeff0;
+    height: 100%;
+    // width: 900px;
+    .test{
+        display: flex;
+        justify-content: center;
+        background-color: #007b81;
+        h1{
+            color: white;
+        }
+    }
+    #close-icon{
+        float: right;
+      margin-top: -49px;
+      margin-right: 14px;
+      font-size: 38px;
+      color: white;
+      cursor: pointer;
+      }
+    h4{
+        padding: 20px 70px;
+        font-size: 20px;
+    }
+    .otp{
+        padding: 20px 20px;
+        text-align: center;
+        
+    }
+    .content{
+    span{
+        margin-left: 250px;
+    }
+    a{
+        color: Blue;
+        cursor: pointer;
+        font-weight: 500;
+    }
+}
+    .btn{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding:20px 0px 20px 0px;
+        button{
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+            width: 150px;
+            padding: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        #cancelBtn{
+         background-color: #929292 ;  
+         cursor: pointer;
+        }
+        
+        #proBtn{
+        background-image: linear-gradient(to right, #1a1d6c, #00b790);
+        cursor: pointer;
+        &:disabled{
+            cursor: not-allowed;
+        }
+
+        }
+       
+    }
+}  

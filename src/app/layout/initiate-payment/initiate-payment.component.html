@@ -1,0 +1,56 @@
+<mat-card class="reportHeader">
+    <span class="subheading">
+         <a (click)="navigateToHome()" class="home" > &nbsp; Home &nbsp; </a>  /
+         <a (click)="navigateToPayment()" class="home"> &nbsp; Payment &nbsp; </a> /
+          <p>&nbsp; Review Claim </p></span>
+</mat-card>
+
+    <section>
+        <div class="spin">
+            <mat-spinner [diameter]="100" *ngIf="spinner"></mat-spinner>
+        </div>
+
+
+        <div class="heading" *ngIf="!spinner">
+            <h1>Review Claim</h1>
+        </div>
+        <div class="content" *ngIf="!spinner">
+    <mat-card *ngFor="let data of paymentData?.claim_account; let i=index">
+            <div class="top">
+                <h2>{{i+1 + "."}} CLAIM ID:  {{data.claim_id}}</h2>
+            </div>
+            <hr>
+            <div class="mid-row">
+                <div class="mid-row1">
+                <h3>Claim Amount </h3>
+                <h1 >{{data.default_full_amount + "KES"}}</h1>
+            </div>
+            <div class="mid-row2">
+                <h3>Platform Access Fees</h3>
+            
+                <h1>{{data.lab_percent_amount + "KES"+ "("+data.lab_percent_for_claim+"%)"}}</h1>
+            </div>
+            <div class="mid-row3">
+                <h3>Transaction Cost</h3>
+                <h1>{{data.transaction_cost + "KES" + "("+data.transaction_percent+"%)"}}</h1>
+            </div>
+            </div>
+            <hr>
+            <div class="last">
+                <h3>Net Availability</h3>
+                <h1 >{{data.final_amount + "KES"}}</h1>
+            </div>
+        </mat-card>
+    </div>
+        <br>
+        <div class="total_amount" *ngIf="!spinner">
+            <div class="amount_payable">
+                <h3>Amount Payable </h3>
+                <h1>{{paymentData?.total_amount + "KES"}}</h1>
+               
+            </div>
+            <div class="btn">
+            <button type="button">Initiate Payment </button>
+        </div>
+        </div>
+        </section>

@@ -1,0 +1,52 @@
+
+<div class="container">
+  <div class="logo" (click)="navigateToLogin()">
+    <div class="img">
+    <img src="assets/livia.png" alt="logo">
+  </div>
+
+  <div class ="path" >
+      <a routerLinkActive="tab">Lab Requests</a>
+      
+      <a  routerLinkActive="tab">Lab Reports</a>
+     
+      <a routerLinkActive="tab">E-Claims</a>
+      
+      <a routerLinkActive="tab">Lab Tests</a>
+      
+      <a  routerLinkActive="tab">Payments</a>
+      
+      <div class="icon">
+        <mat-icon class="user"  style="cursor: pointer;">account_circle</mat-icon>
+        &nbsp;  &nbsp;
+
+
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+       
+           <button mat-menu-item >
+            <mat-icon>assignment_ind</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item (click)="openConfirmDialog()">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+    </div>
+     </div>
+</div>
+<mat-card>
+  <span>Home / <p>&nbsp;  Lab Requests</p></span>
+</mat-card>
+<section>
+  <div class="content">
+      <img src="assets/pre-register5.png" alt="logo">
+      <h1>Account Under Validation</h1>
+      <p>Your account will be validated within 2-3 days by admin. Access all the feature of the portal once validated.</p>
+  </div>
+</section>
+</div>
+
